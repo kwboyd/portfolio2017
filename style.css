@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #FCFCFC;
+  background-color: #F7F7F7;
 }
 
 h1, h2 {
@@ -37,17 +37,24 @@ h3 {
   margin-top: 3px;
 }
 
-#about {
+#about, #works {
   margin-top: -5px;
 }
 
 #first-top-triangle {
   margin-top: -1px;
-  transition: all 3s;
 }
 
-#triangletop {
-  transition: all 3s;
+.triangle-change {
+  transition: all 2s;
+}
+
+.triangle-mobile-bottom {
+  display: none;
+}
+
+.triangle-mobile-top {
+  display: none;
 }
 
 p {
@@ -61,7 +68,7 @@ p {
   margin-right: auto;
   display: flex;
   justify-content: space-around;
-  width: 90%;
+  width: 80%;
   flex-wrap: wrap;
 }
 
@@ -73,6 +80,21 @@ p {
   height: 250px;
 }
 
+#mobile-triangle-box {
+  display:none;
+  width: 100vw;
+  margin-top: 3px;
+}
+
+.mobile-triangle {
+  display: none;
+}
+
+.triangle-desktop-bottom, .triangle-mobile-bottom  {
+  margin-top: 5%;
+}
+
+
 @media screen and (max-width: 1020px) {
   h1 {
     font-size: 7.5rem;
@@ -81,17 +103,41 @@ p {
     font-size: 2rem;
   }
   h3 {
-    font-size: 1.7rem;
-    margin-top: 4%;
+    font-size: 2.5rem;
+    margin-top: 6%;
+    left: 9%;
   }
   #bio p{
     font-size: 1rem;
   }
-}
-
-@media screen and (max-width: 863px) {
   #triangle-box {
+    display: none;
+  }
+  .desktop-triangle {
+    display: none;
+  }
+  .mobile-triangle {
+    display: block;
+  }
+  #mobile-triangle-box {
+    display: block;
     margin-top: 10%;
+    margin-bottom: -1px;
+  }
+  .triangle-mobile-bottom {
+    display: block;
+  }
+  .triangle-mobile-top {
+    display: block;
+  }
+  .triangle-desktop-bottom {
+    display: none;
+  }
+  .triangle-desktop-top {
+    display: none;
+  }
+  #works {
+    margin-top: 0px;
   }
 }
 
@@ -105,7 +151,10 @@ p {
   h3 {
     font-size: 1.3em;
   }
+  #headshot {
+    height: 210px;
+  }
   #bio p{
-    font-size: 1rem;
+    font-size: .8rem;
   }
 }

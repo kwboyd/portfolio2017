@@ -1,0 +1,58 @@
+[
+    {
+        "title": "NC Parks Planner",
+        "image": "img/parks.png",
+        "skills": "Vue.js, MVVM, Flexbox, Google Maps API, JavaScript frameworks, CSS frameworks, Webpack, ESLint",
+        "description": "An interactive road trip planner for state parks in North Carolina that tallies your total distance and driving time as you add and remove destinations. Loads in information from a JSON using Axios and uses the CSS framework Bulma for styling.",
+        "link": "/ncparks",
+        "repo": "https://github.com/kwboyd/NC-state-parks"
+    },
+    {
+        "title": "Contact Manager",
+        "image": "img/contacts.png",
+        "skills": "MySql, PDO, Flexbox, PHP, Bootstrap 4",
+        "description": "A contacts manager that implements CRUD using a MySql database, PHP, and phpMyAdmin.",
+        "link": "/contacts",
+        "repo": "https://github.com/kwboyd/Contacts"
+    },
+    {
+        "title": "Food Insecurity in the US",
+        "image": "img/food.png",
+        "skills": "Data visualization, highcharts and highmaps, AJAX, JSON, XML",
+        "description": "A journalistic data visualization using AJAX to create charts and maps. This site uses CSS from the LA Times for educational purposes and to fulfill the assignment guidelines, but I am not in any way affiliated with them.",
+        "link": "/static/project3",
+        "repo": "https://github.com/kwboyd/Food-Insecurity-Data-Vis"
+    },
+    {
+        "title": "What is a Meteor Shower?",
+        "image": "img/meteor.png",
+        "skills": "Javascript, jQuery, plugins, After Effects animation",
+        "description": "An educational interactive slider inspired by my love of space. This was my first foray into animation and I created all gifs in Photoshop and After Effects. One slide features a draggable object that changes the CSS of that slide, created using jQuery.",
+        "link": "/static/project2",
+        "repo": "https://github.com/kwboyd/Meteor-Shower-Slider"
+    },
+    {
+        "title": "Stay in the Loop",
+        "image": "img/loop.png",
+        "skills": "Social Media APIs, PHP, JavaScript",
+        "description": "A mobile site that pulls in the top 5 trends in America from Twitter, then displays posts with those tags on Twitter, Instagram, and Tumblr. It uses PHP and JavaScript to parse the JSON data pulled from each site. (Instagram recently created more restrictions for their API, so the Instagram section currently does not function.) ",
+        "link": "/static/project4",
+        "repo": "https://github.com/kwboyd/Stay-in-the-Loop"
+    },
+    {
+        "title": "The JK Business",
+        "image": "img/jk.png",
+        "skills": "Dynamic charts, Bootstrap 3",
+        "description": "An informational site about the schoolgirl dating industry in Japan. It uses information from a survey my research group gathered during my study abroad experience at Keio University to populate charts.",
+        "link": "/static/jk",
+        "repo": "https://github.com/kwboyd/jk"
+    },
+    {
+        "title": "CSS dashboard",
+        "image": "img/dashboard.png",
+        "skills": "CSS, Bootstrap 3, images sprites",
+        "description": "This was a class project where we were given an image of a site in Photoshop and told to rebuild it as closely as possible as a responsive site.",
+        "link": "/project1",
+        "repo": "https://github.com/kwboyd/j586-project1"
+    }
+]

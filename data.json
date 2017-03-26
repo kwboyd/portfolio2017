@@ -11,7 +11,7 @@
         "title": "Contact Manager",
         "image": "img/contacts.png",
         "skills": "MySql, PDO, Flexbox, PHP, Bootstrap 4",
-        "description": "A contacts manager that implements CRUD using a MySql database, PHP, and phpMyAdmin.",
+        "description": "A contacts manager that implements CRUD using a MySql database, PHP, and phpMyAdmin. Also features a styleguide for typography, colors, and other UI design elements.",
         "link": "/contacts",
         "repo": "https://github.com/kwboyd/Contacts"
     },
@@ -35,7 +35,7 @@
         "title": "Stay in the Loop",
         "image": "img/loop.png",
         "skills": "Social Media APIs, PHP, JavaScript",
-        "description": "A mobile site that pulls in the top 5 trends in America from Twitter, then displays posts with those tags on Twitter, Instagram, and Tumblr. It uses PHP and JavaScript to parse the JSON data pulled from each site. (Instagram recently created more restrictions for their API, so the Instagram section currently does not function.) ",
+        "description": "A mobile site that pulls in the top 5 trends in America from Twitter, then displays posts with those tags from various social media sites using PHP and JavaScript to parse the data. (Instagram recently changed their API, so that section no longer functions.) ",
         "link": "/static/project4",
         "repo": "https://github.com/kwboyd/Stay-in-the-Loop"
     },

@@ -1,4 +1,4 @@
-var worksStart = document.getElementById('bio');
+var worksStart = document.getElementById('about-bottom');
 var els = document.getElementsByClassName('triangle-change');
 var offsetWorks = worksStart.offsetTop;
 var portfolioHtml;
@@ -90,12 +90,12 @@ function openModal(data, o) {
   var portfolioModal = document.createElement("div");
   portfolioModal.className = 'portfolio-modal';
   portfolioModal.innerHTML =
-  "<div class='inner-modal'><span class='fa fa-close' onclick='closeModal();'></span><div class='modal-top'>" +
+  "<span class='fa fa-close' onclick='closeModal();'></span><div class='modal-top'>" +
   "<img src='" + data[o].image + "' alt=" + data[o].title + "'>" +
-  "<p class='modal-description'>" + data[o].description + "</p></div>" +
-  "<p class='skills'>" + data[o].skills + "</p>" +
-  "<div class='link-box'><a class='site-link live' target='_blank' href='" + data[o].link + "'> VISIT SITE" + "</a>" +
-  "<a class='site-link repo' target='_blank' href='" + data[o].repo + "'> VISIT REPO" + "</a></div>" +
+  "<div class='modal-description'><p>" + data[o].description + "</p>" +
+  "<p class='skills'> Skills: " + data[o].skills + "</p></div></div>" +
+  "<div class='link-box'><a class='site-link live' target='_blank' href='" + data[o].link + "'><p> VISIT SITE </p></a>" +
+  "<a class='site-link repo' target='_blank' href='" + data[o].repo + "'><p> VISIT REPO </p></a>" +
   "</div";
   document.getElementById('modal-container').appendChild(portfolioModal);
 }

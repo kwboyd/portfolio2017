@@ -8,8 +8,34 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="email.js"></script>
   </head>
   <body>
+    <div id="top"></div>
+    <nav id="nav" role="navigation">
+      <div id="hamburger">
+        <svg width="35" height="5">
+          <rect class="triangle-change" width="35" height="5"  />
+        </svg>
+        <svg width="35" height="5">
+          <rect class="triangle-change" width="35" height="5"  />
+        </svg>
+        <svg width="35" height="5">
+          <rect class="triangle-change" width="35" height="5"  />
+        </svg>
+      </div>
+    </nav>
+    <div id="menu">
+      <span id="menu-close" class="fa fa-close"></span>
+      <ul>
+        <a href="#top"><li>Home</li></a>
+        <a href="#about"><li>About</li></a>
+        <a href="#works"><li>Works</li></a>
+        <a href="#skills"><li>Skills</li></a>
+        <a href="#resume"><li>Resume</li></a>
+        <a href="#contact"><li>Contact</li></a>
+      </ul>
+    </div>
       <div id="header-box">
         <h1>Kate Boyd</h1>
         <h2>Front End Web Developer</h2>
@@ -21,6 +47,7 @@
       <div id="mobile-triangle-box">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="4382.967 383.648 384.939 135.094"><defs><style>.a{fill:#61879e;}.b{fill:#805f81;}.c{fill:#47568b;}.d{fill:#3d306c;}</style></defs><g transform="translate(4383)"><path class="a" d="M826.331,641.356V507.528L546.106,641.356Z" transform="translate(-441.425 -123.88)"/><path class="b" d="M216.53,779.159-35.2,685.2l-50.832,58.553L-86,780.029Z" transform="translate(86 -262.023)"/><path class="c" d="M246.283,891.2l153.579-84.014L587.253,891.2Z" transform="translate(-203.07 -372.457)"/><path class="d" d="M782.867,897.018l295.864-58.24v58.24Z" transform="translate(-693.747 -378.276)"/><path class="triangle-mobile-top triangle-change" d="M6.944,756.1l347.688,78.72H6.944Z" transform="translate(-6.944 -316.078)"/></g></svg>
       </div>
+    </div>
     <div id="about">
       <div class="triangle-upper desktop-triangle">
         <h3>About</h3>
@@ -34,8 +61,8 @@
       </div>
         <div class="center">
           <div id="bio">
-            <p>
-              Hi! I’m Kate, a senior at UNC-Chapel Hill
+            <p class="bigger triangle-change">Hi! I’m Kate.</p>
+            <p id="bio-text"> I'm a senior at UNC-Chapel Hill
               with a degree in Interactive Multimedia
               from the school of Media and Journalism
               and a double major in Japanese. I graduate
@@ -43,6 +70,7 @@
               in web development. Thanks for checking
               out my portfolio!
             </p>
+            <a class="triangle-change" href="https://github.com/kwboyd" alt="Github">Github <i class="fa fa-github"></i></a>
           </div>
             <img src="headshot.jpg" id="headshot" alt="Kate Boyd Headshot">
         </div>
@@ -53,25 +81,192 @@
       <svg class="triangle-mobile-bottom" viewBox="0 0 1920 275">
         <polygon class="triangle-change" points="0,0 0,275 1740,275" />
       </svg>
-    </div>
     <div id="works">
-      <h3>Works</h3>
-      <svg class="triangle-change triangle-desktop-top" viewBox="0 0 1920 400" enable-background="new 0 0 1920 400" xml:space="preserve" preserveAspectRatio="none">
+        <h3>Works</h3>
+        <svg class="triangle-change triangle-desktop-top" viewBox="0 0 1920 400" enable-background="new 0 0 1920 400" xml:space="preserve" preserveAspectRatio="none">
+              <polygon points="0,0 894,0 0,400 "/>
+        </svg>
+        <svg class="triangle-mobile-top triangle-change" xmlns="http://www.w3.org/2000/svg" viewBox="4382.87 525 354.922 86.492"><path class="ab" d="M354.792,1071-.13,1166.492V1080Z" transform="translate(4383 -555)"/></svg>
+        <p id="works-instructions">Click on an image to learn more about each project.</p>
+        <div id="works-container">
+        </div>
+        <div id="modal-container">
+        </div>
+        <svg class="triangle-desktop-bottom triangle-bottom-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 175">
+         <polygon class="triangle-change" points="0,0 0,175 894,175" />
+       </svg>
+       <svg class="triangle-mobile-bottom triangle-bottom-up" viewBox="0 0 1920 275">
+         <polygon class="triangle-change" points="0,0 0,275 1740,275" />
+       </svg>
+       <div id="works-bottom"></div>
+
+    </div>
+    <div id="skills">
+      <h3>Skills</h3>
+      <svg class="triangle-change triangle-desktop-top triangle-top-up" viewBox="0 0 1920 400" enable-background="new 0 0 1920 400" xml:space="preserve" preserveAspectRatio="none">
             <polygon points="0,0 894,0 0,400 "/>
       </svg>
       <svg class="triangle-mobile-top triangle-change" xmlns="http://www.w3.org/2000/svg" viewBox="4382.87 525 354.922 86.492"><path class="ab" d="M354.792,1071-.13,1166.492V1080Z" transform="translate(4383 -555)"/></svg>
-      <p id="works-instructions">Click on an image to learn more about each project.</p>
-      <div id="works-container">
+      <h4 class="triangle-change">Programming Skills</h4>
+      <p id="subtitle"> ...this is probably what you came here for... </p>
+      <div class="skills-column" id="programming-skills">
+        <ul>
+          <li>HTML5 and CSS</li>
+          <li>CSS preprocessors (Sass)</li>
+          <li>Vanilla JavaScript</li>
+          <li>JS libraries (jQuery)</li>
+          <li>JavaScript frameworks (Vue.js)</li>
+        </ul>
+        <ul>
+          <li>Flexbox and Responsive Coding</li>
+          <li>Design frameworks (Bootstrap 3/4, Bulma)</li>
+          <li>APIs, AJAX, JSON parsing</li>
+          <li>JavaScript templating (EJS)</li>
+          <li>Git, Github, and colloborative coding</li>
+        </ul>
+        <ul>
+          <li>PHP and Laravel</li>
+          <li>PDO and MySql</li>
+          <li>NPM</li>
+          <li>Familiar with Node.js and Express</li>
+          <li>Unity 3D</li>
+        </ul>
       </div>
-      <div id="modal-container">
+      <h6 class="triangle-change">...but I learned a lot of other things in school too:</h6>
+      <div class="skills-column" id="other-skills">
+        <div>
+          <h5>...from design classes:</h5>
+            <ul>
+              <li>Graphic Design</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe InDesign</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Experience Design</li>
+              <li>Creating wireframes and prototypes</li>
+            </ul>
+        </div>
+        <div>
+          <h5>...from journalism classes:</h5>
+            <ul>
+              <li>Video production and editing</li>
+              <li>Adobe Premiere Pro</li>
+              <li>Oral and written communication</li>
+              <li>Mass communication</li>
+              <li>Precision and clarity</li>
+              <li>Research and information gathering</li>
+            </ul>
+        </div>
+        <div>
+          <h5>...from Japanese classes:</h5>
+          <ul>
+            <li>Japanese skills around JLPT N3 level</li>
+            <li>Navigating unfamiliar situations</li>
+            <li>Learning from and laughing at my own mistakes</li>
+            <li>Understanding other cultures</li>
+            <li>Overcoming communication barriers</li>
+          </ul>
+        </div>
       </div>
-      <svg class="triangle-desktop-bottom works-triangle-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 175">
-       <polygon class="triangle-change" points="0,0 0,175 894,175" />
-     </svg>
-     <svg class="triangle-mobile-bottom works-triangle-bottom" viewBox="0 0 1920 275">
-       <polygon class="triangle-change" points="0,0 0,275 1740,275" />
-     </svg>
     </div>
+    <div id="skills-bottom"></div>
+    <svg class="triangle-desktop-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 175">
+     <polygon class="triangle-change" points="0,0 0,175 894,175" />
+   </svg>
+   <svg class="triangle-mobile-bottom" viewBox="0 0 1920 275">
+     <polygon class="triangle-change" points="0,0 0,275 1740,275" />
+   </svg>
+   <div id="resume">
+     <h3>Resume</h3>
+     <svg class="triangle-change triangle-desktop-top triangle-top-up" id="resume-triangle-top" viewBox="0 0 1920 400" enable-background="new 0 0 1920 400" xml:space="preserve" preserveAspectRatio="none">
+           <polygon points="0,0 894,0 0,400 "/>
+     </svg>
+     <svg class="triangle-mobile-top triangle-change" xmlns="http://www.w3.org/2000/svg" viewBox="4382.87 525 354.922 86.492"><path class="ab" d="M354.792,1071-.13,1166.492V1080Z" transform="translate(4383 -555)"/></svg>
+    <div id="resume-container">
+      <div class="resume-line">
+        <div class="resume-info">
+          <p class="job-comp  triangle-change">Cuba's New Wave</p>
+          <p class="job-title">Web Developer</p>
+          <p class="job-time">December 2016 - Present</p>
+        </div>
+        <div class="resume-resp">
+          <ul>
+            <li>
+            Working with a team of videographers, reporters,
+            designers, and developers to create an interactive
+            documentary website based on our travels to Cuba
+            </li>
+            <li>
+            Set up a system that allows the developers to import
+            the reporter’s articles from Google Drive and automatically update the website with that content using
+            ArchieML, Node.js, Express, and EJS templates
+            </li>
+            <li>
+            Responsible for independently learning, implementing, and then teaching the rest of the team various technologies, including Sass
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-border triangle-change"></div>
+      <div class="resume-line">
+        <div class="resume-info">
+          <p class="job-comp  triangle-change">Heelprint Communications</p>
+          <p class="job-title">Associate Web Developer</p>
+          <p class="job-time">October 2016 - Present</p>
+        </div>
+        <div class="resume-resp">
+          <ul>
+            <li>
+              Working with a client to design and develop a new website as part of a creative team
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-border triangle-change"></div>
+      <div class="resume-line">
+        <div class="resume-info">
+          <p class="job-comp  triangle-change">Davis Library Preservaton Department</p>
+          <p class="job-title">General Collections Conservation Student Assistant</p>
+          <p class="job-time">May 2014 - September 2016</p>
+        </div>
+        <div class="resume-resp">
+          <ul>
+            <li>
+            Worked independently to repair old library books using a variety of hands-on techniques
+            </li>
+            <li>
+              Managed my own time to complete projects assigned to me
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="resume-bottom"></div>
+    <svg class="triangle-desktop-bottom triangle-bottom-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 175">
+     <polygon class="triangle-change" points="0,0 0,175 894,175" />
+   </svg>
+   <svg class="triangle-mobile-bottom triangle-bottom-up" viewBox="0 0 1920 275">
+     <polygon class="triangle-change" points="0,0 0,275 1740,275" />
+   </svg>
+   </div>
+   <div id="contact">
+     <h3>Contact</h3>
+     <svg class="triangle-change triangle-desktop-top triangle-top-up" viewBox="0 0 1920 400" enable-background="new 0 0 1920 400" xml:space="preserve" preserveAspectRatio="none">
+           <polygon points="0,0 894,0 0,400 "/>
+     </svg>
+     <svg class="triangle-mobile-top triangle-change" xmlns="http://www.w3.org/2000/svg" viewBox="4382.87 525 354.922 86.492"><path class="ab" d="M354.792,1071-.13,1166.492V1080Z" transform="translate(4383 -555)"/></svg>
+    <div id="contact-container">
+       <p>Want to drop me a line, recruit me for a job, hire me for a project, or send me a picture of your cat?</p>
+       <p>Email me or message me on Github:</p>
+       <p>Email: <script>mail2("kwboyd95","gmail",0,"","Kate Boyd")</script></p>
+       <p>Github: <a href="https://github.com/kwboyd">kwboyd</a></p>
+     </div>
+     <svg class="triangle-desktop-bottom triangle-bottom-up last-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 175">
+      <polygon class="triangle-change" points="0,0 0,175 894,175" />
+    </svg>
+    <svg class="triangle-mobile-bottom triangle-bottom-up last-triangle" viewBox="0 0 1920 275">
+      <polygon class="triangle-change" points="0,0 0,275 1740,275" />
+    </svg>
+   </div>
     <script src="script.js"></script>
   </body>
 </html>

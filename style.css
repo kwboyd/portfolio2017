@@ -23,7 +23,7 @@ h3 {
   color: #fff;
   left: 4%;
   font-size: 3.5rem;
-  margin-top: 6%;
+  margin-top: 5%;
 }
 
 #header-box {
@@ -46,7 +46,7 @@ h3 {
 }
 
 .triangle-change {
-  transition: all 2s;
+  transition: all 1.5s;
 }
 
 .triangle-mobile-bottom {
@@ -76,8 +76,79 @@ p {
   width: 450px;
 }
 
+.bigger {
+  font-size: 1.7rem;
+  font-weight: 500;
+  /*color: #61879E;*/
+  margin-bottom: 15px;
+}
+
+#bio-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#bio a {
+  /*color: #61879E;*/
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+#bio a:hover {
+  color: #47568B;
+}
+
 #headshot {
   height: 250px;
+}
+
+h4 {
+  margin-left: 4%;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 6px;
+  /*color: #3D306C;*/
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  margin-top: 8px;
+}
+
+h6 {
+  margin-left: 4%;
+  margin-right: 4%;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 6px;
+  /*color: #3D306C;*/
+}
+
+ul {
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding-left: 0px;
+}
+
+.skills-column {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+#other-skills ul {
+  font-size: .8rem;
+}
+
+#subtitle {
+  font-size: 1.1rem;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
 #mobile-triangle-box {
@@ -171,17 +242,16 @@ p {
   background-color: #f7f7f7;
   border: 20px double #47568B;
   width: 76vw;
-  height: 85vh;
 }
 
-.fa-close {
+.modal-close {
   margin: 15px;
   font-size: 2em;
   cursor: pointer;
   position: fixed;
 }
 
-.fa-close:hover {
+.modal-close:hover {
   color: #bbb;
 }
 
@@ -221,6 +291,7 @@ p {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 
@@ -245,8 +316,141 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
-.works-triangle-bottom {
+.triangle-bottom-up {
   margin-top: 1%;
+}
+
+.triangle-top-up {
+  margin-top: -4px;
+}
+
+#contact-container {
+  width: 70%;
+  margin: 30px auto;
+}
+
+#contact-container a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #61879E;
+}
+
+#contact-container a:hover {
+  color: #3D306C;
+}
+
+.last-triangle {
+  margin-bottom: -5px;
+}
+
+.resume-line {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-title {
+  position: fixed;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-left: 55px;
+  font-size: 1.2rem;
+}
+
+.resume-border {
+  width: 75%;
+  height: 1px;
+  background-color: #805F81;
+  margin: 30px auto;
+}
+
+.resume-info {
+  width: 35%;
+}
+
+.resume-resp {
+  width: 50%;
+}
+
+.resume-resp ul {
+  list-style-type: disc;
+  margin-top: calc(1.3rem + 15px);
+  font-size: .9rem;
+}
+
+.job-title, .job-time {
+  margin-bottom: 4px;
+  font-size: .9rem;
+}
+
+.job-comp {
+  margin-bottom: 8px;
+  font-weight: 500;
+  /*color: #805F81;*/
+}
+
+#resume-triangle-top {
+  margin-top: -5px;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  position: fixed;
+  cursor: pointer;
+  z-index: 10;
+  top: 35px;
+  right: 30px;
+}
+
+#hamburger {
+  display: flex;
+  flex-direction: column;
+  background-color: #dde0e4;
+  opacity: .85;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+#hamburger svg {
+  margin-top: 3px;
+}
+
+#menu-close {
+  font-size: 2rem;
+  color: #fff;
+  padding: 15px 15px 0px;
+  cursor: pointer;
+}
+
+#menu {
+  width: 200px;
+  position: fixed;
+  transition: background-color 1.5s;
+  transition: right .3s;
+  z-index: 11;
+  background-color: #000;
+  top: 0px;
+  right: -200px;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+#menu li {
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu li:hover {
+  background-color: #dde0e4;
 }
 
 @media screen and (max-width: 1020px) {
@@ -258,11 +462,13 @@ p {
   }
   h3 {
     font-size: 2.5rem;
-    margin-top: 6%;
     left: 9%;
   }
-  #bio p{
+  #bio-text{
     font-size: 1rem;
+  }
+  .bigger p{
+    font-size: 1.3rem;
   }
   #triangle-box {
     display: none;
@@ -313,6 +519,12 @@ p {
     font-size: .9rem;
     margin-top: 15px;
   }
+  .skills-column {
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .site-link {
     margin: 10px;
     height: 40px;
@@ -326,6 +538,24 @@ p {
   }
 }
 
+@media screen and (max-width: 769px) {
+  .resume-line {
+    flex-direction: column;
+  }
+  .resume-resp, .resume-info {
+    width: 100%;
+  }
+  .resume-resp ul {
+    margin-top: 10px;
+  }
+  #resume-container {
+    margin-top: 20px;
+  }
+  .resume-border {
+    margin: 20px auto;
+  }
+}
+
 @media screen and (max-width: 550px) {
   h1 {
     font-size: 4.3em;
@@ -336,11 +566,24 @@ p {
   h3 {
     font-size: 1.5em;
   }
+  h6 {
+    margin-top: 10px;
+  }
   #headshot {
     height: 210px;
   }
-  #bio p{
+  .bigger {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  #bio-text{
     font-size: .8rem;
+  }
+  #bio a {
+    font-size: 1rem;
+  }
+  #bio {
+    margin-bottom: 10px;
   }
   .link-box {
     flex-direction: column;
@@ -354,5 +597,24 @@ p {
   #works-instructions {
     font-size: 1rem;
     margin: 10px 6vw;
+  }
+  .resume-resp li {
+    font-size: .8rem;
+  }
+  .job-comp {
+    font-size: 1.05rem;
+  }
+  .job-title, .job-time {
+    font-size: .87rem;
+  }
+  #contact-container p {
+    font-size: .9rem;
+  }
+  .modal-title {
+    font-size: 1rem;
+    margin-top: 22px;
+  }
+  nav {
+    top: 20px;
   }
 }

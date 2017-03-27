@@ -1,23 +1,55 @@
-var worksStart = document.getElementById('about-bottom');
+var worksStart;
+var skillsStart;
+var resumeStart;
+var contactStart;
 var els = document.getElementsByClassName('triangle-change');
-var offsetWorks = worksStart.offsetTop;
+var menu = document.getElementById('menu');
+var nav = document.getElementById('nav');
+var menuClose = document.getElementById('menu-close');
+var modalContainer = document.getElementById('modal-container');
+var worksContainer = document.getElementById('works-container');
+var offsetWorks;
+var offsetSkills;
+var offsetResume;
+var offsetContact;
 var portfolioHtml;
 getPortfolio();
+window.addEventListener("scroll", runOnScroll);
 
+nav.addEventListener("click", function() {
+  menu.style.right = "0px";
+})
+
+menuClose.addEventListener("click", function() {
+  menu.style.right = "-200px";
+})
 
 function runOnScroll() {
   for (var i=0; i<els.length; i++) {
     if (document.body.scrollTop >= 15 && document.body.scrollTop <= offsetWorks) {
       els[i].style.fill = "#61879E";
-    } else if (document.body.scrollTop > offsetWorks){
+      els[i].style.color = "#61879E";
+      menu.style.backgroundColor = "#61879E";
+     } else if (document.body.scrollTop > offsetWorks && document.body.scrollTop <= offsetSkills){
       els[i].style.fill = "#47568B";
-    }
+      els[i].style.color = "#47568B";
+      menu.style.backgroundColor = "#47568B";
+    } else if (document.body.scrollTop > offsetSkills && document.body.scrollTop <= offsetResume) {
+       els[i].style.fill = "#3D306C";
+       els[i].style.color = "#3D306C";
+       menu.style.backgroundColor = "#3D306C";
+     } else if (document.body.scrollTop > offsetResume && document.body.scrollTop <= offsetContact) {
+       els[i].style.fill = "#805F81";
+       els[i].style.color = "#805F81";
+       menu.style.backgroundColor = "#805F81";
+     }
     else {
       els[i].style.fill = "#000";
+      els[i].style.color = "#000";
+      menu.style.backgroundColor = "#000";
     }
   }
  };
-window.addEventListener("scroll", runOnScroll);
 
 function getPortfolio(){
     var request = new XMLHttpRequest();
@@ -40,7 +72,6 @@ function getPortfolio(){
 };
 
 function parsePortfolio(data) {
-  var worksContainer = document.getElementById('works-container');
   for (var i in data) {
     var p = data[i];
     (function(piece) {
@@ -51,7 +82,7 @@ function parsePortfolio(data) {
     + "<div class='overlay';'><div class='overlay-text'><p>"
     + piece.title + "</p></div>";
     console.log(piece);
-    document.getElementById('works-container').appendChild(portfolioHtml);
+    worksContainer.appendChild(portfolioHtml);
   })(p);
 };
   if (data.length % 3 == 1) {
@@ -59,12 +90,12 @@ function parsePortfolio(data) {
     fillerOne.className = 'portfolio-box filler';
     var fillerTwo = document.createElement("div");
     fillerTwo.className = 'portfolio-box filler';
-    document.getElementById('works-container').appendChild(fillerOne);
-    document.getElementById('works-container').appendChild(fillerTwo);
+    worksContainer.appendChild(fillerOne);
+    worksContainer.appendChild(fillerTwo);
   } else if (data.length % 3 == 2) {
     var fillerOne = document.createElement("div");
     fillerOne.className = 'portfolio-box filler';
-    document.getElementById('works-container').appendChild(fillerOne);
+    worksContainer.appendChild(fillerOne);
   }
   createOverlays(data);
 };
@@ -80,27 +111,43 @@ function createOverlays(data) {
     });
   })(z);
   };
+  setSections();
 };
 
+function setSections() {
+  setTimeout(function(){
+  worksStart = document.getElementById('about-bottom');
+  skillsStart = document.getElementById('works-bottom');
+  resumeStart = document.getElementById('skills-bottom');
+  contactStart = document.getElementById('resume-bottom');
+  offsetWorks = worksStart.offsetTop - 50;
+  offsetSkills = skillsStart.offsetTop - 100;
+  offsetResume = resumeStart.offsetTop - 80;
+  offsetContact = contactStart.offsetTop - 300;
+}, 500);
+}
+
 function openModal(data, o) {
-  document.getElementById('modal-container').innerHTML = '';
-  document.getElementById('modal-container').style.display = 'block';
+  nav.style.display = 'none';
+  modalContainer.innerHTML = '';
+  modalContainer.style.display = 'block';
   console.log(o);
   console.log(data[o]);
   var portfolioModal = document.createElement("div");
   portfolioModal.className = 'portfolio-modal';
   portfolioModal.innerHTML =
-  "<span class='fa fa-close' onclick='closeModal();'></span><div class='modal-top'>" +
+  "<span class='fa fa-close modal-close' onclick='closeModal();'></span><p class='modal-title'>" + data[o].title + "</p><div class='modal-top'>" +
   "<img src='" + data[o].image + "' alt=" + data[o].title + "'>" +
   "<div class='modal-description'><p>" + data[o].description + "</p>" +
   "<p class='skills'> Skills: " + data[o].skills + "</p></div></div>" +
   "<div class='link-box'><a class='site-link live' target='_blank' href='" + data[o].link + "'><p> VISIT SITE </p></a>" +
   "<a class='site-link repo' target='_blank' href='" + data[o].repo + "'><p> VISIT REPO </p></a>" +
   "</div";
-  document.getElementById('modal-container').appendChild(portfolioModal);
+  modalContainer.appendChild(portfolioModal);
 }
 
 function closeModal() {
-  document.getElementById('modal-container').innerHTML = '';
-  document.getElementById('modal-container').style.display = 'none';
+  nav.style.display = 'block';
+  modalContainer.innerHTML = '';
+  modalContainer.style.display = 'none';
 }

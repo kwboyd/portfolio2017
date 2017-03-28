@@ -14,6 +14,7 @@ var offsetResume;
 var offsetContact;
 var portfolioHtml;
 getPortfolio();
+
 window.addEventListener("scroll", runOnScroll);
 
 nav.addEventListener("click", function() {
@@ -25,31 +26,42 @@ menuClose.addEventListener("click", function() {
 })
 
 function runOnScroll() {
-  for (var i=0; i<els.length; i++) {
-    if (document.body.scrollTop >= 15 && document.body.scrollTop <= offsetWorks) {
-      els[i].style.fill = "#61879E";
-      els[i].style.color = "#61879E";
-      menu.style.backgroundColor = "#61879E";
-     } else if (document.body.scrollTop > offsetWorks && document.body.scrollTop <= offsetSkills){
-      els[i].style.fill = "#47568B";
-      els[i].style.color = "#47568B";
-      menu.style.backgroundColor = "#47568B";
-    } else if (document.body.scrollTop > offsetSkills && document.body.scrollTop <= offsetResume) {
-       els[i].style.fill = "#3D306C";
-       els[i].style.color = "#3D306C";
-       menu.style.backgroundColor = "#3D306C";
-     } else if (document.body.scrollTop > offsetResume && document.body.scrollTop <= offsetContact) {
-       els[i].style.fill = "#805F81";
-       els[i].style.color = "#805F81";
-       menu.style.backgroundColor = "#805F81";
-     }
-    else {
-      els[i].style.fill = "#000";
-      els[i].style.color = "#000";
-      menu.style.backgroundColor = "#000";
-    }
-  }
+  var elementScroll = document.documentElement.scrollTop;
+  var bodyScroll = document.body.scrollTop;
+  if (document.documentElement.scrollTop > document.body.scrollTop) {
+    fillColor(elementScroll);
+  } else if (document.documentElement.scrollTop < document.body.scrollTop) {
+    fillColor(bodyScroll);
+  };
  };
+
+ function fillColor(scroll) {
+   console.log(scroll);
+   for (var i=0; i<els.length; i++) {
+     if (scroll >= 15 && scroll <= offsetWorks) {
+       els[i].style.fill = "#61879E";
+       els[i].style.color = "#61879E";
+       menu.style.backgroundColor = "#61879E";
+      } else if (scroll > offsetWorks && scroll <= offsetSkills){
+       els[i].style.fill = "#47568B";
+       els[i].style.color = "#47568B";
+       menu.style.backgroundColor = "#47568B";
+     } else if (scroll > offsetSkills && scroll <= offsetResume) {
+        els[i].style.fill = "#3D306C";
+        els[i].style.color = "#3D306C";
+        menu.style.backgroundColor = "#3D306C";
+      } else if (scroll > offsetResume && scroll <= offsetContact) {
+        els[i].style.fill = "#805F81";
+        els[i].style.color = "#805F81";
+        menu.style.backgroundColor = "#805F81";
+      }
+     else {
+       els[i].style.fill = "#000";
+       els[i].style.color = "#000";
+       menu.style.backgroundColor = "#000";
+     }
+   }
+ }
 
 function getPortfolio(){
     var request = new XMLHttpRequest();
@@ -81,7 +93,6 @@ function parsePortfolio(data) {
     "<img class='portfolio-image' src='" + piece.image + "' alt=" + piece.title + "'>"
     + "<div class='overlay';'><div class='overlay-text'><p>"
     + piece.title + "</p></div>";
-    console.log(piece);
     worksContainer.appendChild(portfolioHtml);
   })(p);
 };
@@ -102,10 +113,8 @@ function parsePortfolio(data) {
 
 function createOverlays(data) {
   var overlays = document.getElementsByClassName('overlay');
-  console.log(overlays);
   for (var z = 0; z < overlays.length; z ++) {
     (function(z){
-    console.log(overlays[z]);
     overlays[z].addEventListener('click', function(){
       openModal(data, z);
     });
@@ -131,8 +140,6 @@ function openModal(data, o) {
   nav.style.display = 'none';
   modalContainer.innerHTML = '';
   modalContainer.style.display = 'block';
-  console.log(o);
-  console.log(data[o]);
   var portfolioModal = document.createElement("div");
   portfolioModal.className = 'portfolio-modal';
   portfolioModal.innerHTML =

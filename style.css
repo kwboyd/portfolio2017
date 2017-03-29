@@ -31,7 +31,7 @@ h3 {
 }
 
 #about-header {
-  margin-top: -17%;
+  margin-top: -20%;
 }
 
 .mobile {
@@ -51,30 +51,17 @@ h3 {
 #about{
   margin-top: -7px;
 }
+
 #works {
   margin-top: -6px;
 }
-#skills, #resume, #contact {
-  margin-top: -2px;
-}
+
 #menu-close:focus {
   outline: none;
 }
 
-#first-top-triangle {
-  margin-top: -1px;
-}
-
 .triangle-change {
   transition: all 1.5s;
-}
-
-.triangle-mobile-bottom {
-  display: none;
-}
-
-.triangle-mobile-top {
-  display: none;
 }
 
 p {
@@ -99,7 +86,6 @@ p {
 .bigger {
   font-size: 1.7rem;
   font-weight: 500;
-  /*color: #61879E;*/
   margin-bottom: 15px;
 }
 
@@ -109,7 +95,6 @@ p {
 }
 
 #bio a {
-  /*color: #61879E;*/
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   font-size: 1.5rem;
@@ -181,7 +166,7 @@ ul {
   margin-top: 3px;
 }
 
-.triangle-desktop-bottom, .triangle-mobile-bottom  {
+.triangle-desktop-bottom {
   margin-top: 5%;
 }
 
@@ -340,10 +325,6 @@ ul {
   margin-top: 1%;
 }
 
-.triangle-top-up {
-  margin-top: -4px;
-}
-
 #contact-container {
   width: 70%;
   margin: 30px auto;
@@ -408,11 +389,6 @@ ul {
 .job-comp {
   margin-bottom: 8px;
   font-weight: 500;
-  /*color: #805F81;*/
-}
-
-#resume-triangle-top {
-  margin-top: -5px;
 }
 
 #top {
@@ -474,10 +450,6 @@ nav {
 
 #menu li:hover {
   background-color: #dde0e4;
-}
-
-#contact-triangle {
-  margin-top: -5px;
 }
 
 @media screen and (max-width: 1020px) {
@@ -555,10 +527,6 @@ nav {
   }
   #bio {
     margin-bottom: 10px;
-  }
-  .triangle-mobile-top {
-    margin-top: -1px;
-    margin-left: -1px;
   }
 }
 
@@ -654,9 +622,5 @@ nav {
     max-height: 25vh;
     margin-left: auto;
     margin-right: auto;
-  }
-  #first-mobile-triangle {
-    margin-top: -2px;
-    margin-left: -2px;
   }
 }

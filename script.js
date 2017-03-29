@@ -55,7 +55,7 @@ function runOnScroll() {
         els[i].style.color = "#805F81";
         menu.style.backgroundColor = "#805F81";
       }
-     else {
+     else if (scroll < 70 || scroll > offsetContact){
        els[i].style.fill = "#000";
        els[i].style.color = "#000";
        menu.style.backgroundColor = "#000";
@@ -129,10 +129,10 @@ function setSections() {
   skillsStart = document.getElementById('works-bottom');
   resumeStart = document.getElementById('skills-bottom');
   contactStart = document.getElementById('resume-bottom');
-  offsetWorks = worksStart.offsetTop - 50;
-  offsetSkills = skillsStart.offsetTop - 100;
-  offsetResume = resumeStart.offsetTop - 80;
-  offsetContact = contactStart.offsetTop - 300;
+  offsetWorks = worksStart.offsetTop - 80;
+  offsetSkills = skillsStart.offsetTop - 80;
+  offsetResume = resumeStart.offsetTop - 100;
+  offsetContact = contactStart.offsetTop - 350;
 }, 500);
 }
 
